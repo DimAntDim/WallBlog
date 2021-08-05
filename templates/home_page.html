@@ -6,6 +6,7 @@
     {% if posts %}
         {% for post in posts %}
             {% include "blog/post_card.html" %}
+            <hr>
         {% endfor %}
     {% else %}
         There are no posts yet

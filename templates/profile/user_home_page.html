@@ -4,7 +4,7 @@
     <div class="user-content-wrapper">
         {% if profile.is_complete %}
             {% for post in posts %}
-                {% include 'blog/post_card.html' %}
+                {% include 'blog/post_card_user.html' %}
             {% endfor %}
         {% else %}
             <a href={% url 'complete profile' %}><h2>Your profile is not completed. Plese complete!</h2></a>
