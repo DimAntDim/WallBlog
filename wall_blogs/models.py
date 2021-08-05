@@ -35,7 +35,7 @@ class Post(models.Model):
         null=True,
         blank=False,
     )
-    creator = models.CharField(
+    author = models.CharField(
         max_length=200,
         null=True,
         blank=True,

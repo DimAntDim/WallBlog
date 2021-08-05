@@ -20,7 +20,15 @@
                     <a>
                 </div>
             </li>
-          <li class="nav-item"><a href="complete profile" class="nav-link" style="pointer-events: none;">Hello, {{ request.user }}</a></li>
+          <li class="nav-item">
+              <a href="{% url 'user home page' request.user.id %}" class="nav-link">
+                {% if request.user.profile.first_name %}
+                  Hello, {{ request.user.profile.first_name }}
+                {% else %} 
+                  Hello, {{ request.user }}
+                {% endif %} 
+              </a>
+          </li>
         </div>
         <div class='logout-icon'>        
           <a href="{% url 'logout' %}"><img src="{% static 'img/switch-off.jpg' %}" alt='Logoff' ></a>
