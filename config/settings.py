@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'wall_auth',
     'wall_profiles',
+    'wall_common',
 ]
 
 MIDDLEWARE = [

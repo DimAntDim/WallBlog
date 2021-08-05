@@ -1,0 +1,23 @@
+{% extends 'shared/base.html' %}
+{% block content %}
+    <div class="card-container">
+        <span class="pro">PRO</span>
+        
+        <img class="round" src="{{ doctor.profile_image.url }}" alt="user">
+        <h3>{{ doctor.first_name }} {{ doctor.last_name }}</h3>
+        <h6>{{ doctor.location }}</h6>
+
+        <div class="buttons">
+          <button class="primary">
+            Like
+          </button>
+          <button class="primary ghost">
+            Make appointment
+          </button>
+        </div>
+        <div class="skills">
+          <h6>{{ doctor.spetiality }}</h6>
+        </div>
+      </div>
+{% endblock content %}
+
