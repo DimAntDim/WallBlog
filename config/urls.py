@@ -9,5 +9,6 @@ urlpatterns = [
     path('', include('wall_common.urls')),
     path('account/', include('wall_auth.urls')),
     path('profile/', include('wall_profiles.urls')),
+    path('posts/', include('wall_blogs.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

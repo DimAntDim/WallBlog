@@ -3,7 +3,13 @@
 
 
 {% block content %} 
-
+    {% if posts %}
+        {% for post in posts %}
+            {{post.title}}
+        {% endfor %}
+    {% else %}
+        There are no posts yet
+    {% endif %}
 {% endblock %}
 
 

@@ -9,6 +9,13 @@
         <ul class="nav-menu">
             <div class='user-icon'>
             </div>
+            <li class="nav-item">
+                {% if request.user.is_autenticated %}
+                    <a href="{% url 'create post' %}" class="nav-link">Create Post</a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="nav-link">Create Post</a>
+                {% endif %}
+            </li>
             <li>
                 <div id="profile_picture">
                     <img  src="{% static 'img/avatar.jpg' %}">
